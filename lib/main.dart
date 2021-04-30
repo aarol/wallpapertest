@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wallpapertest/process.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,11 +25,15 @@ class MainPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  setWallpaperManager(1);
+                },
                 child: Text('wallpaper_manager 1'),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  setWallpaperManager(2);
+                },
                 child: Text('wallpaper_manager 2'),
               ),
             ],
@@ -37,12 +42,16 @@ class MainPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ElevatedButton(
-                onPressed: () {},
-                child: Text('byteArray 1'),
+                onPressed: () {
+                  setWithIsolate(1);
+                },
+                child: Text('set with isolates 1'),
               ),
               ElevatedButton(
-                onPressed: () {},
-                child: Text('byteArray 2'),
+                onPressed: () {
+                  setWithIsolate(2);
+                },
+                child: Text('set with isolates 2'),
               ),
             ],
           ),
