@@ -21,39 +21,53 @@ class MainPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          CircularProgressIndicator(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ElevatedButton(
                 onPressed: () {
-                  setWallpaperManager(1);
+                  setAssetWallpaperManager(1);
                 },
                 child: Text('wallpaper_manager 1'),
               ),
               ElevatedButton(
                 onPressed: () {
-                  setWallpaperManager(2);
+                  setAssetWallpaperManager(2);
                 },
                 child: Text('wallpaper_manager 2'),
               ),
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
                 onPressed: () {
-                  setWithIsolate(1);
+                  setAsset(1);
                 },
-                child: Text('set with isolates 1'),
+                child: Text('set asset 1'),
               ),
+              SizedBox(width: 10.0),
               ElevatedButton(
                 onPressed: () {
-                  setWithIsolate(2);
+                  setAsset(2);
                 },
-                child: Text('set with isolates 2'),
+                child: Text('set asset 2'),
               ),
             ],
+          ),
+          ElevatedButton(
+            onPressed: () {
+              setFileWallpaperManager();
+            },
+            child: Text('wallpaper_manager file'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              setFile();
+            },
+            child: Text('set file'),
           ),
         ],
       ),
